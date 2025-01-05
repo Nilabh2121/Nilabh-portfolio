@@ -322,9 +322,14 @@
     padding: 1rem 48px;
     flex-direction: column;
   }
+  .footer_top{
+    position: relative;
+    left: 10px;
+  }
 
   .footer_content {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     left: 0;
   }
