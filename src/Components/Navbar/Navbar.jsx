@@ -3,7 +3,7 @@ import { themeContext } from '../../Context';
 import './Navbar.css';
 import Toogle from '../Toogle/Toogle';
 import { Link } from 'react-scroll';
-import { UilBars, UilTimes } from '@iconscout/react-unicons'; // For hamburger and close icons
+import { UilBars, UilTimes } from '@iconscout/react-unicons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,10 +22,10 @@ const Navbar = () => {
     <div className={`n-wrapper ${darkMode ? 'dark-mode' : 'light-mode'}`}>
       {/* Left Section */}
       <div className="n-left">
-        <div className="n-name">{/* Dynamic text color */}
+        <div className="n-name">
           <span style={{ color: darkMode ? 'white' : 'black' }}>NILABH</span>
         </div>
-        <Toogle  style={{ color: darkMode ? 'white' : 'black' }} />
+        <Toogle style={{ color: darkMode ? 'white' : 'black' }} />
       </div>
 
       {/* Middle Section */}
@@ -64,16 +64,16 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Hamburger Menu Icon for Small Screens */}
+      {/* Hamburger Menu Icon */}
       <div className="hamburger-icon" onClick={toggleMenu}>
         {isOpen ? (
-          <UilTimes size="30" color={darkMode ? 'white' : 'black'} /> // Dynamic icon color
+          <UilTimes size="30" color={darkMode ? 'white' : 'black'} />
         ) : (
           <UilBars size="30" color={darkMode ? 'white' : 'black'} />
         )}
       </div>
 
-      {/* Sidebar for Mobile & Tablet View */}
+      {/* Sidebar */}
       <div className={`sidebar ${isOpen ? 'active' : ''}`}>
         <div className="sidebar-close" onClick={closeSidebar}>
           <UilTimes size="30" color="white" />
@@ -88,7 +88,7 @@ const Navbar = () => {
           <Link spy={true} to="BarSkill" smooth={true}>
             <li>BarSkill</li>
           </Link>
-          <Link spy={true} to="experience" smooth={true}>
+          <Link spy={true} to="Experience" smooth={true}>
             <li>Experience</li>
           </Link>
           <Link spy={true} to="Education" smooth={true}>
@@ -99,6 +99,9 @@ const Navbar = () => {
           </Link>
           <Link spy={true} to="Testimonials" smooth={true}>
             <li>Testimonials</li>
+          </Link>
+          <Link spy={true} to="Contact" smooth={true}>
+            <li>Contact Us</li>
           </Link>
         </ul>
       </div>

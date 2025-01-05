@@ -8,7 +8,7 @@
     color: #fff;
     background-color: transparent;
     margin-bottom: 8rem;
-    min-height: 90vh;
+    height: 100%;
 }
 
 .contact-heading {
@@ -199,6 +199,9 @@ textarea:focus {
 
 /* iPads (481px - 1024px) */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .contact-form{
+        height: 100% !important;
+    }
 
     .contact-container {
         flex-direction: row;

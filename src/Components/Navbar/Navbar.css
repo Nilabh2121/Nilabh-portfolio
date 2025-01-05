@@ -77,20 +77,21 @@
     cursor: pointer;
 }
 
-/* Sidebar Styling (Mobile and Tablet) */
+/* Sidebar styles for the middle list */
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Initially hidden off-screen */
-    width: 250px;
-    height: 560px;
-    background-color: #282c34;
-    transition: right 0.3s ease;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: -220px; /* Hidden by default */
+  width: 220px;
+  height: 100vh;
+  background-color: #000000;
+  border-radius: 10px;
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 
 .sidebar.active {
-    right: 0; /* Slide in when active */
+  right: 0; /* Slide-in effect */
 }
 
 .sidebar-close {
@@ -98,20 +99,31 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .sidebar-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    list-style: none;
-    color: white;
-    font-size: 1.6rem;
+  position: absolute;
+  top: 4%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  list-style: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.sidebar-list :hover{
+  color: #fff;
+  color: #bc0af2;
 }
 
 .sidebar-list li {
-    cursor: pointer;
+  cursor: pointer;
+  color: #fff;
 }
 
 /* Smartphones (320px - 480px) */
@@ -145,10 +157,11 @@
   .sidebar {
     position: fixed;
     top: 0;
-    right: -250px; /* Hidden by default */
-    width: 250px;
+    right: -220px; /* Hidden by default */
+    width: 220px;
     height: 100vh;
-    background-color: #282c34;
+    background-color: #000000;
+    border-radius: 10px;
     transition: right 0.3s ease;
     z-index: 1000;
   }
@@ -167,13 +180,21 @@
   }
 
   .sidebar-list {
+    position: absolute;
+    top: 4%;
+    left: 10%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
     list-style: none;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .sidebar-list :hover{
+    color: #fff;
+    color: #bc0af2;
   }
 
   .sidebar-list li {
@@ -217,5 +238,54 @@
   /* Style adjustments for Contact button */
   .n-right .n-button {
     display: none;
+  }
+
+  /* Sidebar styles for the middle list */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -220px; /* Hidden by default */
+    width: 220px;
+    height: 100vh;
+    background-color: #000000;
+    border-radius: 10px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    right: 0; /* Slide-in effect */
+  }
+
+  .sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .sidebar-list {
+    position: absolute;
+    top: 4%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    list-style: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .sidebar-list :hover{
+    color: #fff;
+    color: #bc0af2;
+  }
+
+  .sidebar-list li {
+    cursor: pointer;
+    color: #fff;
   }
 }
