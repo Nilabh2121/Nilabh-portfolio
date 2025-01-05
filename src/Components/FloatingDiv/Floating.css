@@ -1,0 +1,52 @@
+.FloatingDiv {
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer box shadow */
+    display: inline-flex; /* Use inline-flex to allow dynamic width based on content */
+    justify-content: flex-start; /* Align items at the start */
+    padding: 10px 20px; /* Add some padding */
+    height: 3.8rem;
+    width: auto; /* Dynamic width based on content */
+    border: 4px solid #bc0af2; /* Keep border */
+    gap: 10px; /* Space between image and text */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  .FloatingDiv img {
+    transform: scale(0.6); /* Adjust image scale */
+    max-width: 50px; /* Set max width for image */
+    margin-right: 10px; /* Space between image and text */
+  }
+  
+  .FloatingDiv span {
+    font-family: 'Patua One', cursive;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: black;
+    white-space: nowrap; /* Prevent text from wrapping onto multiple lines */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis if text is too long for the container */
+    text-align: left;
+    word-wrap: normal; /* No line breaks */
+  }
+  
+  /* Responsive Design: For smaller screens */
+  @media (max-width: 768px) {
+    .FloatingDiv {
+      flex-direction: column; /* Stack image and text vertically */
+      align-items: center; /* Center items */
+      padding: 15px;
+    }
+  
+    .FloatingDiv img {
+      margin: 0 0 10px 0; /* Adjust spacing for stacked layout */
+      transform: scale(0.8); /* Scale image for smaller screens */
+    }
+  
+    .FloatingDiv span {
+      text-align: center;
+      font-size: 0.9rem; /* Adjust font size */
+    }
+  }
+  

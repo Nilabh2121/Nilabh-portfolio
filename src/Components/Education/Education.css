@@ -1,0 +1,270 @@
+/* Education Wrapper */
+.Education-Wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+}
+
+/* Heading */
+.Education-Heading {
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: 700;
+    font-family: 'Patua One', cursive;
+    margin-bottom: 5rem;
+    color: #fff;
+}
+
+.Education-Heading .highlight {
+    color: #bc0af2;
+}
+
+/* Lottie Wrapper */
+.Lottie-Wrapper {
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+}
+
+.Lottie-Wrapper.left {
+    left: -40px;
+}
+
+.Lottie-Wrapper.right {
+    right: -40px;
+}
+
+/* Education Entry Container */
+.Education-Entry {
+    background: rgba(2, 2, 2, 0.05);
+    border: 4px solid var(--orangeCard);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 45rem;
+    min-height: 26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+/* Image Styling */
+.Education-Entry img {
+    border: 4px solid #bc0af2;
+    border-radius: 100%;
+    width: 9rem;
+    height: 9rem;
+}
+
+/* Institution Name */
+.Education-Entry .institution {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* Details (Qualification, Year, Score) */
+.Education-Entry .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-weight: 500;
+    width: 100%;
+}
+
+.Education-Entry .qualification {
+    color: #bc0af2;
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+}
+
+.Education-Entry .year,
+.Education-Entry .score {
+    font-size: 1.3rem;
+    margin-top: 0.8rem;
+}
+
+/* Swiper Container */
+.Education-Wrapper .swiper {
+    width: 100%;
+    max-width: 47rem;
+    padding-bottom: 5rem; /* Extra space for navigation/pagination */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Swiper Slide Centering */
+.Education-Wrapper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+/* Bullet Color */
+.swiper-pagination-bullet {
+    background: #bc0af2;
+    opacity: 1;
+}
+
+/* Custom Swiper Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px !important; /* Increased width for larger buttons */
+    height: 50px !important; /* Increased height for larger buttons */
+    background: #bc0af2; /* Oval background color */
+    color: #fff !important; /* Blue color for the arrow */
+    border-radius: 50%; /* Ensures oval shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* On hover effects for buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #8a08c8; /* Slightly darker purple for hover */
+    transform: translateY(-50%) scale(1.1); /* Subtle scaling effect */
+}
+
+/* Arrow Icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 22px; /* Adjusted font size for larger buttons */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+
+
+/* Arrow Positions Inside the Card */
+.swiper-button-next {
+    right: 15px; /* Slightly inside the card */
+}
+
+.swiper-button-prev {
+    left: 15px; /* Slightly inside the card */
+}
+
+/* Arrow Icons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.swiper-button-next::after {
+    content: '\f105'; /* Font Awesome right arrow */
+}
+
+.swiper-button-prev::after {
+    content: '\f104'; /* Font Awesome left arrow */
+}
+
+
+/* Smartphones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+
+    .Education-Heading{
+        font-size: 2.3rem;
+    }
+
+    .Lottie-Wrapper.left {
+        right: 50%;
+        transform: scale(0.6);
+    }
+    
+    .Lottie-Wrapper.right {
+        left: 50%;
+        transform: scale(0.6);
+    }
+
+
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 25px;
+        height: 25px;
+    }
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+        margin-right: 10em !important; 
+    }
+}
+
+
+/* iPads (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .Education-Wrapper{
+        margin-bottom: 4rem;
+    }
+    /* Adjusting Education Entry Card */
+    .Education-Entry {
+        max-width: 42rem; /* Make the card smaller */
+        min-height: 22rem; /* Reduce height */
+        padding: 1.5rem; /* Adjust padding */
+    }
+
+    .Education-Entry img {
+        width: 7rem; /* Smaller profile image */
+        height: 7rem;
+    }
+
+    /* Adjusting Lottie Wrapper (Astronauts) */
+    .Lottie-Wrapper.left {
+        left: -5em; /* Keep position consistent but reduce size */
+    }
+
+    .Lottie-Wrapper.right {
+        right: -5em; /* Keep position consistent but reduce size */
+    }
+
+    .Lottie-Wrapper {
+        top: 50px; /* Adjust position slightly */
+        transform: scale(0.8); /* Scale down astronaut images */
+    }
+
+    /* Adjusting Swiper Buttons */
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .swiper-button-next {
+        right: -10px;
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+    }
+
+    /* Adjusting Pagination Bullets */
+    .swiper-pagination-bullet {
+        width: 8px; /* Reduce bullet size */
+        height: 8px;
+    }
+}

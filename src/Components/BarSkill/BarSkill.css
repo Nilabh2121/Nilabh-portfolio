@@ -1,0 +1,222 @@
+/* Container Styles */
+.barskill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    height: auto; /* Adjusts height automatically */
+}
+
+/* Title Section */
+.Bs-left {
+    font-size: 3.8rem;
+    font-weight: 700;
+    font-family: 'Patua One', cursive;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title .purple {
+    color: #bc0af2;
+}
+
+.Bs-right{
+    position: absolute;
+    -webkit-animation: floatimage 8s ease-in-out infinite;
+    animation: floatimage 8s ease-in-out infinite;
+    display: flex;
+    gap: 150px;
+    margin-top: 13rem;
+    margin-left: 2rem;
+    position: relative;
+    position: absolute;
+}
+
+
+
+.circle{
+    width:  5.5rem;
+    height: 5.5rem;
+    background: white;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.Achievement span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; /* Center-align text */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center;
+
+}
+
+
+.circle::before{
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom, #f3c 0%, #3cf 100%);
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: var(--boxShadow);
+    animation: circlerotate 5s linear infinite;
+    filter: blur(1.5px);
+}
+
+.span{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Slider Section */
+.slider-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+}
+
+.slider {
+    display: flex;
+    gap: 2.3rem;
+    animation: slide 20s linear infinite;
+    width: calc(300px * 9 * 2);
+}
+
+.slide-item {
+    width: 150px !important; /* Square dimension */
+    height: 100px; /* Square dimension */
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px #bc0af2;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Keyframe for infinite loop animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Moves the slider full length */
+}
+
+
+
+/* Smartphones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .barskill {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 4rem; /* Reduced gap for smartphone */
+    }
+
+    /* Title Section */
+    .Bs-left {
+        font-size: 2.5rem; /* Reduced title size */
+        text-align: center; /* Center title for better readability */
+        margin-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Right Section (Floating Circle and Achievements) */
+    .Bs-right {
+        margin-top: 8rem; /* Adjust top margin */
+        margin-left: 0;
+        gap: 0.5rem; /* Adjust gap for better alignment */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .circle {
+        width: 4rem; /* Smaller circles */
+        height: 4rem;
+        font-size: 1.3rem; /* Smaller font size */
+        margin-bottom: 1rem; /* Reduce margin between circles */
+    }
+
+    .Achievement {
+        transform: scale(0.8); /* Slightly reduce size */
+    }
+
+    /* Slider Section */
+    .slider-section {
+        margin-top: 9rem; /* Adjusted margin */
+        padding: 1rem 0;
+    }
+
+    .slider {
+        gap: 1.5rem; /* Smaller gap for slider items */
+    }
+
+    .slide-item {
+        width: 100px; /* Adjusted square size */
+        height: 70px; /* Adjusted height */
+    }
+}
+
+
+/* iPads (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .barskill {
+        padding: 1rem;
+        gap: 10rem; /* Adjusted gap to better fit the screen */
+        height: auto;
+        margin-top: 9rem;
+    }
+
+    .Bs-left {
+        font-size: 4rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .Bs-right {
+        margin-top: 10em;
+        margin-left: 0; /* Center-aligned for better balance */
+        flex-wrap: wrap;
+        gap: 6rem; /* Adjusted gap to fit screen size */
+        justify-content: center; /* Ensures proper alignment */
+        width: calc(100% - 6rem); /* Matches the slider width */
+    }
+
+    .circle {
+        width: 4.5rem; /* Adjusted for smaller screen fit */
+        height: 4.5rem;
+        font-size: 1.4rem;
+    }
+
+    .Achievement {
+        transform: scale(0.9); /* Slightly smaller for better fit */
+    }
+    .slider-section{
+        margin-top: 2em;
+    }
+}

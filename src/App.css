@@ -1,0 +1,69 @@
+:root {
+  --yellow: #F5C32C;
+  --orange: #FCA61F;
+  --black: #242d49;
+    --gray: #788097;
+    --blueCard: #ddf8fe;
+    --purple: #eed2ff;
+    --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard: rgba(202, 0, 253, .753);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, .08);
+    --mixture: linear-gradient(#f06, #3cf);
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-ms: 90%;
+    --table-border-color: #fff;
+}
+
+.light-mode {
+  --table-border-color: #000; /* Border color for light mode */
+}
+
+
+.App {
+  padding: 0.5rem 3.5rem;
+  overflow: auto; /* Change to auto to allow scrolling */
+  color: var(--black);
+  transition: background-color 0.5s; /* Smooth transition for background color */
+}
+
+
+.button {
+  background: transparent;
+    border: 3px solid #b90bea;
+    border-radius: 34px;
+    box-shadow: 0 2px 2px 1px #b90bea;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.button:hover{
+  background: hsla(0, 0%, 100%, .08);
+    border: 1px solid #12fb12;
+    color: #14ff9d;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.n-button:hover {
+  background: hsla(0, 0%, 100%, .08);
+    border: 1px solid #12fb12;
+    color: #14ff9d;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+      padding: 0.5rem 1.2rem;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+

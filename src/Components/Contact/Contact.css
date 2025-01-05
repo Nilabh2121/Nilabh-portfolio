@@ -1,0 +1,254 @@
+/* Existing styles for .contact-form and related elements */
+.contact-form {
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    color: #fff;
+    background-color: transparent;
+    margin-bottom: 8rem;
+    min-height: 90vh;
+}
+
+.contact-heading {
+    font-size: 3.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.c-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-animation {
+    transform: scale(1.3);
+    position: relative;
+    right: 12%;
+    width: 100%;
+    max-width: 600px;
+}
+
+.c-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative; /* Positioning context for the panda and form */
+}
+
+.c-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem;
+    border-radius: 15px;
+    background: black;
+    border: 2px solid #bc0af2;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8);
+    z-index: 2; /* Ensure the form is over the panda */
+    position: relative;
+}
+
+/* Alternating border colors */
+.c-right .user {
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgba(219, 46, 46, 0.5);
+    border-radius: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.c-right .user:nth-child(odd) {
+    border: 3px solid #bc0af2;
+}
+
+.c-right .user:nth-child(even) {
+    border: 3px solid #bc0af2;
+}
+
+.c-right .user:focus {
+    box-shadow: 0 0 0.7rem rgb(121, 64, 255);
+}
+
+textarea {
+    resize: none;
+    height: 6rem;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: black;
+    color: black;
+}
+
+.user {
+    color: black; /* Makes the text inside the input fields black */
+}
+
+.user::placeholder {
+    color: black; /* Makes the placeholder text black */
+}
+
+textarea:focus {
+    border-color: #9a6eff;
+    box-shadow: 0 0 0.7rem rgba(154, 110, 255, 0.5);
+}
+
+.c-button {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0px 5px 15px rgba(154, 110, 255, 0.5);
+    transition: background 0.3s, transform 0.3s;
+    border: 3px solid #b90bea;
+    box-shadow: 0 2px 2px 1px #b90bea;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.c-button:hover {
+    background: hsla(0, 0%, 100%, .08);
+    border: 1px solid #12fb12;
+    color: #14ff9d;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* Default state */
+.c-button.default {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #b90bea;
+    box-shadow: 0 2px 2px 1px #b90bea;
+}
+
+/* Button while sending */
+.c-button.sending {
+    background: rgba(154, 110, 255, 0.1);
+    color: #fff;
+    border: 3px solid #9a6eff;
+    cursor: not-allowed;
+}
+
+/* Button when sent successfully */
+.c-button.sent {
+    background: #12fb12;
+    color: #fff;
+    border: 3px solid #12fb12;
+    cursor: not-allowed;
+    font-weight: bold;
+}
+
+/* Hover effect */
+.c-button:hover {
+    background: hsla(0, 0%, 100%, .08);
+    border: 1px solid #12fb12;
+    color: #14ff9d;
+    cursor: pointer;
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+/* Smartphones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        width: 350px;
+    }
+    .contact-heading {
+         width: 250px;
+         font-size: 2.5rem;
+    }
+    .contact-animation {
+        transform: scale(1);
+        position: relative;
+        left: 0;
+    }
+    .c-right form{
+        width: 350px;
+    }
+}
+
+/* iPads (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+
+    .contact-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .c-left {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-heading{
+        font-size: 5rem;
+    }
+
+    .contact-animation {
+        top: 6em;
+        width: 100%;
+        max-width: 320px;
+        transform: scale(1.5);
+        position: relative;
+        right: 0;
+    }
+
+    .c-right {
+        width: 80%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .c-right form {
+        width: 100%;
+        max-width: 450px;
+        padding: 2rem;
+    }
+
+    .contact-form{
+        padding: 0;
+    }
+
+    .contact-heading {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .c-button {
+        font-size: 1.1rem;
+    }
+}

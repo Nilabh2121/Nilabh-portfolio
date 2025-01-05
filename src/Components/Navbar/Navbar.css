@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+/* Basic Navbar Structure */
+.n-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.n-name {
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: animatex 10s linear infinite;
+    animation: animatex 10s linear infinite;
+    background:  #bc0af2;
+    -webkit-background-clip: text;
+    background-size: 400%;
+    font-family: cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Left, Middle, and Right Sections */
+.n-left {
+    flex: 1;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.n-middle {
+  flex: 2;
+  display: flex;
+  position: relative;
+  left: 2.5%;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+.n-list {
+  -webkit-animation: slideTop 1s ease forwards;
+  animation: slideTop 1s ease forwards;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  color: #fff;
+  display: flex;
+  gap: 1.6rem;
+  font-size: 2rem;
+}
+
+.n-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.n-list {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.n-list li {
+  cursor: pointer;
+  color: #fff;
+}
+
+.n-button {
+    padding: 0px 30px;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Sidebar Styling (Mobile and Tablet) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden off-screen */
+    width: 250px;
+    height: 560px;
+    background-color: #282c34;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0; /* Slide in when active */
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    list-style: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.sidebar-list li {
+    cursor: pointer;
+}
+
+/* Smartphones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+  .n-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .n-left {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    gap: 1rem; /* Add spacing if needed between elements */
+    margin-top: 1rem; /* Add gap from the top */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger icon */
+    position: relative; /* Align with the left section */
+    margin-top: 1rem; /* Match the margin-top of .n-left */
+    z-index: 1000;
+  }
+
+  .n-middle {
+    display: none; /* Hide the middle section */
+  }
+
+  /* Sidebar styles for the middle list */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background-color: #282c34;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    right: 0; /* Slide-in effect */
+  }
+
+  .sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    list-style: none;
+    color: white;
+    font-size: 1.4rem;
+  }
+
+  .sidebar-list li {
+    cursor: pointer;
+    color: #fff;
+  }
+  .n-button{
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* iPads (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .n-wrapper {
+    padding: 0 1rem;
+  }
+
+  .n-left, .n-right, .n-middle {
+    flex: 1;
+  }
+
+  /* Display hamburger icon and hide middle section by default */
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Hide the middle section initially and show it when toggled */
+  .n-middle {
+    display: none;
+  }
+
+  /* Style adjustments for Contact button */
+  .n-right .n-button {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem; /* Space between cards */
+    flex-wrap: wrap; /* Ensure cards stack on smaller screens */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(2, 2, 2, 0.05);
+    border: 5px solid var(--orangeCard);
+    border-radius: 20px;
+    box-shadow: var(--boxShadow);
+    padding: 1.5rem;
+    text-align: center;
+    width: 250px; /* Fixed width for consistency */
+    height: auto; /* Fixed height for consistency */
+    flex: 1 1 auto; /* Allow flexible sizing based on content */
+}
+
+.card img {
+    margin-bottom: 1rem;
+    transform: scale(0.7);
+}
+
+.card span:nth-last-of-type(2) {
+    color: #bc0af2;
+    font-family: 'Patua One', cursive;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card span:last-of-type {
+    color: #fff;
+    font-family: 'Patua One', cursive;
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 0 0 2px #000;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+    .card-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Allow height to adapt */
+    }
+}

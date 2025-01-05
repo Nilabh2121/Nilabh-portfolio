@@ -1,0 +1,270 @@
+.experinece{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 8rem;
+}
+
+.experineceheading {
+    font-size: 3.8rem;
+    font-weight: 700;
+    font-family: 'Patua One', cursive;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.experineceheading .work {
+    color: #fff; 
+    margin-right: 20px; 
+
+}
+
+.experineceheading .experience {
+    color: #bc0af2; 
+}
+
+.wrapper{
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+  }
+  .wrapper .center-line{
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+
+  .wrapper .center-line::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    background: #bc0af2;
+    border-radius: 50%; /* For a circle; remove for a square */
+  }
+  .wrapper .row{
+    display: flex;
+  }
+  .wrapper .row-1{
+    justify-content: flex-start;
+  }
+  .wrapper .row-2{
+    justify-content: flex-end;
+  }
+  .wrapper .row section{
+    background: transparent;
+    border: 2px solid #bc0af2;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+    min-height: 250px; /* Increase height as desired */
+  }
+  .wrapper .row section::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    top: 28px;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+  .row-1 section::before{
+    right: -7px;
+  }
+  .row-2 section::before{
+    left: -7px;
+  }
+
+  .row section .icon {
+    border: 2px solid #bc0af2; /* Add border around each icon */
+  }
+
+
+  .row-1 section::after {
+    right: -50px; /* Adjust position to connect with Google icon */
+    height: 20px;
+  }
+  .row-2 section::after {
+    left: -50px; /* Adjust position to connect with Amazon icon */
+    height: 20px;
+  }
+  .center-line::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 0;
+    background: #bc0af2;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: height 0.3s ease;
+  }
+
+  .row section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .row.visible section {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s; /* Add a delay */
+  }
+
+  .center-line .blue-light {
+    position: absolute;
+    width: 4px;
+    height: 0;
+    background: #bc0af2;
+    left: 0;
+    top: 0;
+    transition: height 0.3s ease;
+  }
+
+  .row section .icon,
+  .center-line .scroll-icon{
+    position: absolute;
+    background: #f2f2f2;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 17px;
+    box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+  }
+  .center-line .scroll-icon{
+    bottom: 0px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+  }
+  .row-1 section .icon{
+    top: 15px;
+    right: -60px;
+  }
+  .row-2 section .icon{
+    top: 15px;
+    left: -60px;
+  }
+  .row section .details,
+  .row section .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .row section .details .title{
+    color: #bc0af2;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .row section p{
+    margin: 10px 0 17px 0;
+  }
+
+  .row section .bottom {
+    display: flex;
+    justify-content: flex-end; /* Aligns the link to the right */
+    margin-top: 15px; /* Optional: adds space above the bottom section */
+}
+  .row section .bottom a{
+    text-decoration: none;
+    background: transparent;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 2px solid #bc0af2;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+  .row section .bottom a:hover{
+    transform: scale(0.97);
+  }
+
+
+  .wrapper .row section .details {
+    display: flex;
+    flex-direction: column; /* Stack title and role vertically */
+    align-items: flex-start; /* Align content to the left */
+}
+
+.wrapper .row section .details .title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px; /* Add space below the company title */
+}
+
+.wrapper .row section .details span {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 19px;
+    color: #bc0af2;
+}
+
+.wrapper .row section .details .role {
+    font-weight: 500;
+}
+
+.wrapper .row section .details .date {
+    margin-left: auto; /* Push date to the right */
+    font-size: 16px;
+    color: #bc0af2; /* Optional: add a softer color for the date */
+}
+
+.experiencetext{
+    margin-top: 20px;
+}
+
+
+.wrapper .row section ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Adds space to position bullets */
+    margin-top: 10px; /* Optional: adds space above the list */
+}
+
+.wrapper .row section ul li {
+    margin-bottom: 8px; /* Adds space between list items */
+}
+
+
+/* iPads (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  
+  .wrapper .row{
+    margin: 10px 0;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .experineceheading {
+    font-size: 2.5rem;
+  }
+    .wrapper .center-line{
+      left: 40px;
+    }
+    .wrapper .row{
+      margin: 30px 0 3px 60px;
+    }
+    .wrapper .row section{
+      width: 100%;
+    }
+    .row-1 section::before{
+      left: -7px;
+    }
+    .row-1 section .icon{
+      left: -60px;
+    }
+  }

@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+
+.About{
+    display: flex;
+    height: 100%;
+}
+
+
+.A-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 1.5;
+}
+
+.A-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.A-name span {
+    word-spacing: 0.1em; /* Adjust spacing between words slightly */
+}
+
+.A-name>:nth-child(2) {
+    color: #fff;
+    display: flex;
+    font-family: cursive;
+    font-size: 4.75rem;
+    font-weight: 600;
+}
+
+A-name>:nth-child(3), .A-name>:nth-child(4) {
+    color: #fff;
+    font-family: Patua One;
+    font-weight: 500;
+    text-align: justify;
+}
+.A-name>:nth-child(3) {
+    font-size: 1.8rem;
+    margin-left: -.15rem;
+    margin-bottom: 1rem;
+    margin-top: 14px;
+}
+
+
+.txt-clr, .txt-clr1 {
+    color: #bc0af2;
+    font-family: Patua One, cursive;
+    font-weight: 500;
+}
+.txt-clr {
+    font-size: 1.8rem;
+}
+
+.A-name>:nth-child(4) {
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: Patua One, cursive;
+    font-weight: 500;
+    text-align: justify;
+}
+
+/* Table styling for Info section */
+/* Table styling for Info section with transparent background and visible borders */
+/* Table styling for Info section with transparent background, visible borders, and alternating text colors */
+.InfoTable {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.InfoTable table {
+    /* width: 100%; */
+    max-width: 500px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.InfoTable table.light-border {
+    border: 2px solid black; /* Light mode border */
+}
+
+.InfoTable table.dark-border {
+    border: 2px solid white; /* Dark mode border */
+}
+
+
+.InfoTable th,
+.InfoTable td {
+    padding: 0.5rem 0.8rem;
+    font-family: 'Patua One', cursive;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 4px solid var(--table-border-color); /* Inner cell borders */
+}
+
+/* Alternating colors: First column white, second column purple */
+.InfoTable tr:nth-child(odd) td:first-child,
+.InfoTable tr:nth-child(even) td:last-child {
+    color: #fff;
+}
+
+.InfoTable tr:nth-child(odd) td:last-child,
+.InfoTable tr:nth-child(even) td:first-child {
+    color: #bc0af2;
+}
+
+.InfoTable .Info5, .InfoTable .Info1, .InfoTable .Info2, .InfoTable .Info3, .InfoTable .Info4 {
+    text-align: center;
+}
+
+.A-right {
+    flex: 1 1;
+    margin-left: 1rem;
+    margin-top: 14rem;
+    position: relative;
+}
+
+A-right>* {
+    border-radius: 50%;
+    padding: 0;
+    position: absolute;
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+}
+
+.A-right .glowingcircle {
+    position: absolute; /* Make sure it's absolutely positioned */
+    align-items: center;
+    -webkit-animation: zoomIn 1s ease forwards, floatimage 6s ease-in-out infinite;
+    animation: zoomIn 1s ease forwards, floatimage 6s ease-in-out infinite;
+    -webkit-animation-delay: 2.4s 3.1s;
+    animation-delay: 2.4s 3.1s;
+    background-color: #fff;
+    border-radius: 55%;
+    display: flex;
+    justify-content: center;
+    
+    /* Adjust size and centering */
+    width: 50%;
+    height: 50%;
+    top: 14%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    
+    /* Add box shadow or glow for a more dramatic effect */
+    box-shadow: 0 0 30px rgba(188, 10, 242, 0.7);
+}
+
+
+.glowingcircle .dp {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    z-index: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.dp img{
+    max-width: 352px;
+    object-fit: cover;
+    border-radius: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15px;
+    bottom: 15px;
+}
+
+.glowingcircle span:nth-child(1){
+    filter:blur(10px);
+
+}
+
+A-right>:nth-child(2) {
+    border-radius: 50%;
+    margin-left: 5rem;
+    padding: 0;
+    left: -24%;
+    top: -30%;
+    -webkit-transform: scale(.6);
+    transform: scale(.6);
+}
+
+.A-right .glowingcircle::after{
+    content:'';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(#f06,#3cf);
+    filter: blur(5px);
+    animation: circlerotate 5s linear infinite;
+    border-radius: 50%;
+}
+
+.floating-div1 {
+    position: absolute;
+    bottom: 540px;
+    right: 0px;
+}
+
+.floating-div2 {
+    position: absolute;
+    bottom: 40px;
+}
+
+
+.glassesimoji {
+    position: absolute;
+    width: 150px; /* Adjust this to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    bottom: 480px;
+    animation: slideRight 2s ease forwards;
+}
+
+
+.About.light-mode {
+    color: black;
+  }
+  
+  .About.dark-mode {
+    color: white;
+  }
+  
+  .InfoTable th,
+  .InfoTable td {
+    /* Dark and light mode styles handled via parent class */
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .InfoTable.light-mode td {
+    color: black;
+  }
+  
+  .InfoTable.dark-mode td {
+    color: white;
+  }
+  
+
+
+
+@keyframes slideRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTop {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideBottom {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity:1 ;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatimage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes circlerotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Smartphones (320px - 480px) */
+@media only screen and (max-width: 480px) {
+
+    .About {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem; /* Add space at the bottom to prevent overlap */
+        gap: 2rem;
+        padding: 1rem;
+        height: auto;
+        margin-bottom: 18em;
+    }
+
+    .A-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .A-name > :nth-child(2) {
+        font-size: 2.8rem; /* Adjust heading size */
+        text-align: center;
+        justify-content: center;
+        line-height: 1.2;
+        margin: 0.5rem 0;
+    }
+
+    .A-name > :nth-child(3) {
+        font-size: 1.5rem; /* Adjust text size */
+        margin: 0.5rem 0;
+        padding: 1.2rem;
+    }
+
+    .A-name > :nth-child(4) {
+        font-size: 1.3rem; /* Adjust text size */
+        padding: 2rem;
+    }
+
+    .txt-clr{
+        font-size: 1.5rem;
+    }
+
+    .txt-clr1 {
+        font-size: 1.3rem;
+    }
+
+    .InfoTable {
+        margin: 1rem auto;
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center the content */
+        transform: scaleX(0.95);
+    }
+
+    .InfoTable table {
+        font-size: 0.9rem; /* Adjust font size for readability */
+    }
+
+    .floating-div1,
+    .floating-div2 {
+        display: none; /* Hide floating divs for smaller screens */
+    }
+
+    .A-right .glowingcircle {
+        transform: scale(0.5);
+        position: absolute;
+        left: -0.78em;
+    }
+}
+
+
+/* iPads (481px - 1024px) */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .About {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    .A-left {
+        flex: 0 0 50%;
+    }
+
+    .A-name > :nth-child(2) {
+        font-size: 3.5rem; /* Adjust heading size */
+        text-align: left;
+    }
+
+    .A-name > :nth-child(3) {
+        font-size: 1.6rem; /* Adjust text size */
+        margin: 0.5rem 0;
+    }
+
+    .A-name > :nth-child(4) {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    .InfoTable {
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    .InfoTable table {
+        max-width: 100%; /* Adjust width */
+        margin-left: 0;
+    }
+
+    .A-right {
+        flex: 0 0 50%; /* Allocate half the width for the right section */
+    }
+
+    .glowingcircle {
+        position: relative;
+        bottom: 2em;
+    }
+
+    .floating-div1 {
+        position: absolute;
+        bottom: 33em;
+        left: 14em;
+        transform: scale(0.8);
+    }
+
+    .floating-div2 {
+        position: absolute;
+        top: 27em;
+        right: 12em;
+        transform: scale(0.8);
+    }
+    .glassesimoji {
+        position: relative;
+        bottom: 14em;
+    }
+}
