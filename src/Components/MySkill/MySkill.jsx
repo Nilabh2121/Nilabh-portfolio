@@ -38,7 +38,7 @@ const MySkills = () => {
             time and space complexity.
           </p>
         </div>
-        <a href="/NILABHKUMAR_RESUME.pdf" download="" className='skills-section-anchor'>
+        <a href="/NILABHKUMAR_RESUME_MAIN.pdf" download="" className='skills-section-anchor'>
           <button className="button s-button" style={{ color: darkMode ? 'white' : 'black' }}>Download Resume</button>
         </a>
       </div>
